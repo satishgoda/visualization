@@ -2,6 +2,8 @@
    typical steps during software compilation */
 
 digraph G {
+  node [shape="diamond"];
+
   main -> parse -> execute
   main -> init
   main -> cleanup
