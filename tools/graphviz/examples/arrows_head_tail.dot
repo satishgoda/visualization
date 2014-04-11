@@ -1,0 +1,7 @@
+digraph G  {
+   rankdir=LR;
+
+   a -> b [arrowtail=obox arrowhead=box];
+   a -> d [arrowtail=diamond arrowhead=crow];
+   c -> a [dir="back" arrowhead=obox arrowtail=box];
+}
