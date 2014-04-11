@@ -1,16 +1,18 @@
 /* This sample script generates a graph of 
    typical steps during software compilation */
-
 digraph G {
-  node [shape="diamond"];
-
+  parse; cleanup;
+  
+  node [shape="diamond"] main, init, compare;
+  node [shape="circle"] execute, make_string;
+  
   main -> parse -> execute
   main -> init
   main -> cleanup
-
-  node [shape="circle"];
-
   execute -> make_string
+  
+  node [shape="box"];
+  
   execute -> printf
   init -> make_string
   main -> printf
