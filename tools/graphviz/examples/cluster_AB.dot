@@ -1,0 +1,17 @@
+digraph G {
+    compound=true;
+    nodesep=1.0;
+ 
+    subgraph cluster_A {
+        label="Cluster A";
+        a -> b; a -> c;
+    }
+ 
+    subgraph cluster_B {
+        label="Cluster B";
+ 
+        d -> e; f -> e;
+    }
+ 
+    a -> e [ ltail=cluster_A ];
+}
