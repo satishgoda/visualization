@@ -1,0 +1,6 @@
+digraph {
+    Universe -> "Solar System";
+    "Solar System" -> Mercury;
+    "Solar System" -> Earth;
+    Earth -> Moon;
+}
