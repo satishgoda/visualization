@@ -1,0 +1,28 @@
+digraph G {
+   RnH [label="Rhythm & Hues"];
+
+   USA; 
+   India;
+   Malaysia;
+   Canada;
+   Taiwan;
+
+   RnH -> {USA, India, Malaysia, Canada, Taiwan};
+
+   LA   [label="Los Angeles\n (MAIN)"];
+   KL   [label="Kuala Lumpur\n (KL)"];
+   VAN  [label="Vancouver\n (VAN)"];
+   HYD  [label="Hyderabad\n (HYD)"];
+   MUM  [label="Mumbai\n (MUM)"];
+   CAVE [label="R&H Cloud\n (CAVE)"];
+
+   USA -> LA;
+
+   Canada -> VAN;
+
+   India -> {MUM,HYD};
+
+   Malaysia -> KL;
+
+   Taiwan -> CAVE;
+}
