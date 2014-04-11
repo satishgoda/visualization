@@ -7,6 +7,9 @@ digraph G {
   main -> parse -> execute
   main -> init
   main -> cleanup
+
+  node [shape="circle"];
+
   execute -> make_string
   execute -> printf
   init -> make_string
