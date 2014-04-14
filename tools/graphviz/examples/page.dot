@@ -1,0 +1,24 @@
+digraph G {
+    node [shape="circle"] Page;
+    
+    node [shape="box"]; 
+        heading1; 
+        heading2;
+
+    node [shape="ellipse"]; 
+        subheading11; 
+        subheading12;
+
+    node [shape="diamond"];
+        subheading21; 
+        subheading22;
+
+    Page -> heading1;
+    Page -> heading2;
+
+    heading1 -> subheading11;
+    heading1 -> subheading12;
+
+    heading2 -> subheading21;
+    heading2 -> subheading22;
+}
