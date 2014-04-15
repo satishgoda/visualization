@@ -11,20 +11,16 @@ digraph {
     overlap = scalex;
     sep = 1.3;
     
-    node [shape="box"];
+    node [shape="box", color="red"] {
+        file1 file2 file3
+    };
     
-    file1;
-    file2;
-    file3;
-    
-    node [shape="ellipse"];
-    
-    user1;
-    user2;
-    user3;
+    node [shape="ellipse", color="blue"] {
+        user1 user2 user3
+    };
     
     user1 -> {file1 file2} [label="opened"];
-    user2 -> {file1 file2; file3} [label="opened"];
+    user2 -> {file1 file2 file3} [label="opened"];
     user3 -> {file1} [label="opened"];
     
 }
