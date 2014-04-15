@@ -1,0 +1,30 @@
+digraph {
+    label = "User and File usage graph";
+    
+    /*
+    layout = dot;
+    rankdir = LR;
+    ranksep = 2;
+    */
+    
+    layout = neato;
+    overlap = scalex;
+    sep = 1.3;
+    
+    node [shape="box"];
+    
+    file1;
+    file2;
+    file3;
+    
+    node [shape="ellipse"];
+    
+    user1;
+    user2;
+    user3;
+    
+    user1 -> {file1 file2} [label="opened"];
+    user2 -> {file1 file2; file3} [label="opened"];
+    user3 -> {file1} [label="opened"];
+    
+}
