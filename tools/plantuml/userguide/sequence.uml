@@ -1,0 +1,81 @@
+' http://plantuml.com/sequence.html
+
+@startuml
+    title 1.1/1.2 Basic examples/Comments
+
+    Alice -> Bob: Authentication Request
+    Bob --> Alice: Authentication Received
+    
+    ' It is also possible to use <- and <-- 
+    ' Drawing stays the same but leads to improved readability 
+
+    Bob <- Alice: Another Authentication Request
+    Alice <-- Bob: Another Authentication Received
+@enduml
+
+
+@startuml
+    title 1.3.1 Changing participant order (before)
+    
+    A -> B
+@enduml
+
+
+@startuml
+    title 1.3.2 Changing participant order (after) 
+    
+    A -> B
+
+    participant B
+    participant A
+@enduml
+
+
+@startuml
+    title 1.3.3 Declaring various participant types
+
+    ' Hide the footer display of the participants
+    hide footbox
+
+    participant Participant  
+    actor Actor 
+    boundary Boundary
+    control Control
+    entity Entity
+    database Database
+
+    Participant --> Participant: as 'participant'
+    Participant --> Actor: as 'actor'
+    Participant --> Boundary: as 'boundary'
+    Participant --> Control: as 'control'
+    Participant --> Entity: as 'entity'
+    Participant --> Database: as 'database'
+@enduml
+
+@startuml
+    title 1.3.4 Change participant background color
+    
+    hide footbox 
+    
+    actor Red    #red
+    actor Yellow #yellow
+    actor Green  #green
+    actor Blue   #blue
+@enduml
+
+@startuml
+    title 1.3.5 Rename participant(s) using the 'as' keyword
+
+    hide footbox
+    
+    actor Bob #red
+    database M as "MySQL" #red
+    database "Cassandra" as C #green
+    actor Alice #green
+
+    'We cannot use actor name as Cassandra at the other end of the arrow
+
+    Bob --> M : Saves in \n a \n Relational Database
+    Alice -> C : Saves in \n a \n NoSQL Database  
+@enduml
+
