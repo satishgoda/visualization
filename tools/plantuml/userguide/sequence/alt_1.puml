@@ -1,0 +1,36 @@
+@startuml
+    title Decision making
+    hide footbox
+
+    participant A
+    participant B
+    participant C
+
+    A <--] : Stimulus from environment
+    A -> A
+    note right: Verify truth value from stimulus\nand decide the path to take
+    activate A
+
+    alt Truth
+        create B
+        A -> B
+        activate B
+        ||45||
+        A <- B
+        destroy B
+        ||10||
+    else Falsity
+        create C
+        A -> C
+        activate C
+        ||75||
+        A <- C
+        destroy C
+        ||10||
+    end 'of alt
+
+    A -> A
+    note right: Update memory with the decision taken
+    A -->] : Update environment
+    deactivate A
+@enduml
