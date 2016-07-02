@@ -1,0 +1,20 @@
+@startuml
+hide footbox
+
+activate b
+[--> b
+note right: Starting processing
+
+||25||
+==25% done==
+
+||25||
+==50% done==
+
+...
+==100% done==
+
+[<-- b
+note right: Done with processing
+deactivate b
+@enduml
