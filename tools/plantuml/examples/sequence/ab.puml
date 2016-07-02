@@ -4,15 +4,23 @@ hide footbox
 [-> a
 
 create b
+
 a -> b
 activate b
+note right: Starting processing
+
 ||25||
-==25==
+==25% done==
+
 ||25||
-==50==
+==50% done==
+
 ...
-==100==
+==100% done==
+
 b --> a
+note right: Done with processing
 deactivate b
+
 [<- a
 @enduml
