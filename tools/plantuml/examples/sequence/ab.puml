@@ -1,0 +1,18 @@
+@startuml
+hide footbox
+
+[-> a
+
+create b
+a -> b
+activate b
+||25||
+==25==
+||25||
+==50==
+...
+==100==
+b --> a
+deactivate b
+[<- a
+@enduml
